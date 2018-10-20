@@ -1,31 +1,82 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<link href="~/assets/css/icons/icomoon/styles.css" rel="stylesheet" />
+<link href="~/assets/css/extras/animate.min.css" rel="stylesheet" />
+<style>
+    #content-principal {
+        padding: 30px 0px 0px 0px;
+    }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    .grid-principal {
+        padding: 10px;
+        margin: 10px 0px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+        .grid-principal:hover {
+            box-shadow: 2px 2px 7px midnightblue;
+        }
+
+            .grid-principal:hover .text-grid {
+                background-color: midnightblue;
+                color: white;
+                border-top: 1px solid white;
+            }
+
+    .text-grid {
+        border-top: 1px solid white;
+        padding: 20px;
+        background-color: azure;
+        box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+
+    .grid-principal img {
+        height: 250px;
+        width: 100%;
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+    }
+
+    .resumo-grid {
+        width: auto;
+        display: none;
+        /*padding: 20px;*/
+        position: absolute;
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+    }
+</style>
+
+
+<div class="row" id="content-principal">
+    @foreach (var grid in Model.ListaGrids)
+    {
+        <div class="col-sm-4">
+            <div class="grid-principal">
+                <span class="resumo-grid"> Resumo do Grid</span>
+                <div><img src="@grid.UrlImagem" class="img-responsive" /></div>
+                <div class="text-grid">@grid.Text</div>
+            </div>
+        </div>
+    }
 </div>
+@section scripts {
+    <script src="~/Static/Scripts/Modules/Util/animation_css_config.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.grid-principal').mouseover(function () {
+                let span = $(this).children().first();
+                span.show().animateCss("fadeInDown");
+            });
+            $('.grid-principal').mouseout(function () {
+                let span = $(this).children().first();
+                span.hide();
+            });
+        });
+    </script>
+}
