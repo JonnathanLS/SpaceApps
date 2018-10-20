@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Launcher.Models.Home;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,8 @@ namespace Launcher.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var viewModel = new IndexVm();
+            return View(viewModel);
         }
 
         public ActionResult About()

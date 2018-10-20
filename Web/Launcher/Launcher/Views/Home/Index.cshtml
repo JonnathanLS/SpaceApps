@@ -1,8 +1,9 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model Launcher.Models.Home.IndexVm
+@{
+    ViewBag.Title = "Página Principal";
 }
-<link href="~/assets/css/icons/icomoon/styles.css" rel="stylesheet" />
-<link href="~/assets/css/extras/animate.min.css" rel="stylesheet" />
+<link href="~/Static/assets/css/icons/icomoon/styles.css" rel="stylesheet" />
+<link href="~/Static/assets/css/extras/animate.min.css" rel="stylesheet" />
 <style>
     #content-principal {
         padding: 30px 0px 0px 0px;
@@ -15,20 +16,21 @@
         box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     }
 
-        .grid-principal:hover {
-            box-shadow: 2px 2px 7px midnightblue;
-        }
+    .grid-principal:hover {
+        box-shadow: 2px 2px 7px midnightblue;
+    }
 
-            .grid-principal:hover .text-grid {
-                background-color: midnightblue;
-                color: white;
-                border-top: 1px solid white;
-            }
+    .grid-principal:hover .text-grid {
+        background-color: midnightblue;
+        color: white;
+        border-top: 1px solid white;
+    }
 
     .text-grid {
+        text-align: center;
         border-top: 1px solid white;
         padding: 20px;
-        background-color: azure;
+        background-color: lightblue;
         box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         border-bottom-right-radius: 7px;
         border-bottom-left-radius: 7px;
@@ -42,11 +44,13 @@
     }
 
     .resumo-grid {
-        width: auto;
+        /*height: 210px;*/
+        width: 87%;
+        text-align: center;
+        padding: 20px 0px;
         display: none;
-        /*padding: 20px;*/
         position: absolute;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.6);
         color: white;
     }
 </style>
@@ -57,8 +61,10 @@
     {
         <div class="col-sm-4">
             <div class="grid-principal">
-                <span class="resumo-grid"> Resumo do Grid</span>
-                <div><img src="@grid.UrlImagem" class="img-responsive" /></div>
+                <div>
+                    <span class="resumo-grid"> Resumo do Grid</span>
+                    <img src="@grid.UrlImagem" class="img-responsive" />
+                </div>
                 <div class="text-grid">@grid.Text</div>
             </div>
         </div>
@@ -68,13 +74,12 @@
     <script src="~/Static/Scripts/Modules/Util/animation_css_config.js"></script>
     <script>
         $(document).ready(function () {
-
             $('.grid-principal').mouseover(function () {
-                let span = $(this).children().first();
-                span.show().animateCss("fadeInDown");
+                let span = $(this).children().first().children().first();
+                span.show().animateCss("fadeIn");
             });
             $('.grid-principal').mouseout(function () {
-                let span = $(this).children().first();
+                let span = $(this).children().first().children().first();
                 span.hide();
             });
         });
