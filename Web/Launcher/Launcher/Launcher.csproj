@@ -148,6 +148,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LancamentosFuturosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2457,6 +2458,7 @@
     <Content Include="Static\Assets\locales\en.json" />
     <Content Include="Static\Assets\locales\ru.json" />
     <Content Include="Static\Assets\locales\ua.json" />
+    <Content Include="Views\LancamentosFuturos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
