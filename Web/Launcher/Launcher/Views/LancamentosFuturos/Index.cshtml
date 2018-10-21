@@ -1,15 +1,26 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <h2 class="tituloLancamentosFuturos">Lançamentos Futuros</h2>
-</head>
-<body>
-    <div>
-        <iframe width="1100" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiNDk1OTQyNjktNjRhYi00MDM1LWI3MzUtZTZhM2E0ZTQ0ZTRiIiwidCI6IjYxODUxZjk5LTc5NGUtNDJlMC1iNTk0LWZhMGUwOTNlMGRmNSJ9" frameborder="0" allowFullScreen="true"></iframe>
+<style>
+    .panel {
+        margin-top: 30px;
+    }
+
+    iframe {
+        height: 500px;
+        width: 100%;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h6 class="panel-title">Lançamentos Futuros</h6>
+            </div>
+
+            <div class="panel-body">
+                <iframe src="https://app.powerbi.com/view?r=eyJrIjoiNDk1OTQyNjktNjRhYi00MDM1LWI3MzUtZTZhM2E0ZTQ0ZTRiIiwidCI6IjYxODUxZjk5LTc5NGUtNDJlMC1iNTk0LWZhMGUwOTNlMGRmNSJ9" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</div>

@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+﻿    <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    <title>SpaceApps - Rocket Launcher - Equipe XVikings</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -21,7 +21,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Relátórios", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Relatórios", "Index", "Home")</li>
                     <li>@Html.ActionLink("Equipe", "About", "Home")</li>
                     <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
                 </ul>
@@ -31,13 +31,20 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - XVikings - SpaceApps Rocket Launcher ASP.NET</p>
+        <footer style="font-size: 16px;">
+            <p>&copy; @DateTime.Now.Year - SpaceApps - Time XVikings - Projeto Rocket Launcher - Produzido em ASP.NET</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+@section scripts{
+<script>
+    $(document).ready(function () {
+        $("i")[0].click();
+    });
+</script>
+}

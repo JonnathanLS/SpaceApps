@@ -151,12 +151,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LancamentosAgenciasController.cs" />
     <Compile Include="Controllers\LancamentosFuturosController.cs" />
+    <Compile Include="Controllers\MissoesPaisController.cs" />
     <Compile Include="Controllers\SitesLancamentosController.cs" />
+    <Compile Include="Controllers\TiposFoguetesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Home\ContactVm.cs" />
-    <Compile Include="Models\Home\FormContact.cs" />
     <Compile Include="Models\Home\Grid.cs" />
     <Compile Include="Models\Home\IndexVm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -175,6 +175,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\cketLauncher - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -2468,10 +2469,11 @@
     <Content Include="Views\EspacoPorto\Index.cshtml" />
     <Content Include="Views\LancamentosAgencias\Index.cshtml" />
     <Content Include="Views\SitesLancamentos\Index.cshtml" />
+    <Content Include="Views\MissoesPais\Index.cshtml" />
+    <Content Include="Views\TiposFoguetes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Relatorios\" />
     <Folder Include="Static\Css\Modules\" />
   </ItemGroup>
   <ItemGroup>

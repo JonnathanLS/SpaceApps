@@ -1,18 +1,26 @@
 ﻿
 @{
-    ViewBag.Title = "Sites de Lançamentos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
-    iframe {
+    .panel {
         margin-top: 50px;
+    }
+
+    iframe {
         height: 500px;
         width: 100%;
     }
 </style>
 <div class="container">
     <div class="row">
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYjFkZTllNWQtNDUwNi00YjE5LWEwNDMtMGI5ZWE5NDViMTZkIiwidCI6IjYxODUxZjk5LTc5NGUtNDJlMC1iNTk0LWZhMGUwOTNlMGRmNSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h6 class="panel-title">Sites de Lançamentos</h6>
+            </div>
+            <div class="panel-body">
+                <iframe src="https://www.google.com/url?q=https://app.powerbi.com/view?r%3DeyJrIjoiYjFkZTllNWQtNDUwNi00YjE5LWEwNDMtMGI5ZWE5NDViMTZkIiwidCI6IjYxODUxZjk5LTc5NGUtNDJlMC1iNTk0LWZhMGUwOTNlMGRmNSJ9&source=gmail&ust=1540217913849000&usg=AFQjCNGf6qh1Uu8vcIsMfIQXXKwDH4kK1Q" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+        </div>
     </div>
 </div>
-

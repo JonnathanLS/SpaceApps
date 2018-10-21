@@ -1,17 +1,41 @@
 ﻿@{
     ViewBag.Title = "Contato";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<style>
+    .panel{
+        margin-top: 30px;
+    }
+    address {
+        font-size: 16px;
+    }
 
-<address>
-    <strong>E-mails de Contato:</strong>   <a href="mailto:Support@example.com"></a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+</style>
+
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h6 class="panel-title">Informações de Contato</h6>
+            </div>
+            <div class="panel-body">
+                <address>
+                    Brazil - São Paulo - SP<br />
+                </address>
+
+                <address>
+                    <u>E-mails de contato dos membros da equipe:</u>
+                    <br /><br />
+                    <strong>Jonnathan: </strong><a href="mailto:jonnathan.santos@fatec.sp.gov.br">jonnathan.santos@fatec.sp.gov.br</a><br />
+                    <strong>Diego: </strong><a href="mailto:diegopiresbr@gmail.com">diegopiresbr@gmail.com</a><br />
+                    <strong>Guilherme: </strong><a href="mailto:gui.s.taira@live.com">gui.s.taira@live.com</a><br />
+                    <strong>Kelvin: </strong><a href="mailto:kelvin.matsushita@gmail.com">kelvin.matsushita@gmail.com</a><br />
+                    <strong>Fernando: </strong><a href="mailto:fernando_henry007@hotmail.com">fernando_henry007@hotmail.com</a><br />
+                    <strong>Victor: </strong><a href="mailto:victor.dcampos@gmail.com">victor.dcampos@gmail.com</a><br />
+                    <strong>Rodolfo: </strong><a href="mailto:roddiasmacedo@gmail.com">roddiasmacedo@gmail.com</a><br />
+                </address>
+            </div>
+        </div>
+    </div>
+</div>
