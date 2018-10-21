@@ -9,6 +9,7 @@ namespace Launcher.Models.Home
     {
         public string Text { get; set; }
         public string UrlImagem { get; set; }
+        public string UrlPagina { get; set; }
         public Grid() { }
     }
 }

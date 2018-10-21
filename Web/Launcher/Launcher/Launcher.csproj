@@ -147,11 +147,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EspacoPortoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LancamentosFuturosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Home\ContactVm.cs" />
+    <Compile Include="Models\Home\FormContact.cs" />
     <Compile Include="Models\Home\Grid.cs" />
     <Compile Include="Models\Home\IndexVm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2459,6 +2462,7 @@
     <Content Include="Static\Assets\locales\ru.json" />
     <Content Include="Static\Assets\locales\ua.json" />
     <Content Include="Views\LancamentosFuturos\Index.cshtml" />
+    <Content Include="Views\EspacoPorto\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

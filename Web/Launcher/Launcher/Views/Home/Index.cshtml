@@ -61,11 +61,13 @@
     {
         <div class="col-sm-4">
             <div class="grid-principal">
-                <div>
-                    <span class="resumo-grid"> Resumo do Grid</span>
-                    <img src="@grid.UrlImagem" class="img-responsive" />
-                </div>
-                <div class="text-grid">@grid.Text</div>
+                <a href="../@grid.UrlPagina">
+                    <div>
+                        <span class="resumo-grid"> Resumo do Grid</span>
+                        <img src="@grid.UrlImagem" class="img-responsive" />
+                    </div>
+                    <div class="text-grid">@grid.Text</div>
+                </a>
             </div>
         </div>
     }
@@ -75,13 +77,16 @@
     <script>
         $(document).ready(function () {
             $('.grid-principal').mouseover(function () {
-                let span = $(this).children().first().children().first();
+                let span = ResumoGridElmento($(this));
                 span.show().animateCss("fadeIn");
             });
             $('.grid-principal').mouseout(function () {
-                let span = $(this).children().first().children().first();
+                let span = ResumoGridElmento($(this));
                 span.hide();
             });
         });
+        function ResumoGridElmento(jQuery) {
+            return jQuery.children().first().children().first().children().first();
+        }
     </script>
 }
