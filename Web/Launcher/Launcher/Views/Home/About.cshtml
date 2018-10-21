@@ -1,7 +1,117 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Equipe";
+    string pnlClass = "panel panel-default";
+    string lblClass = "label label-default";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<style>
+    img{
+        margin-top: 30px;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.5)
+    }
+    .panel-body{
+        text-align: center;
+    }
+    hr{
+        margin: 10px 0px;
+    }
+    #text-img{
+        width: 100%;
+        padding: 20px;
+        text-align: center; 
+        font-size: 20px;
+        color: darkblue;
+    }
+    .panel-title{
+        text-align: center;
+    }
+    .label{
+        font-size: 15px;
+        display: block;
+        background-color: white;
+        color: black;
+    }
+</style>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <img src="https://www.agambiarra.com/wp-content/uploads/2016/09/star-trek-agambiarra-01-1170x480.jpg" alt="Foto Do Time" />
+        </div>
+        <span class="col-sm-12" id="text-img">
+            Membros da Equipe
+        </span>
+        <hr />
+
+        <div class="col-sm-3">
+            <div id="panel-agenda-visitas" class="@pnlClass">
+                <div class="panel-heading">
+                    <h6 class="panel-title">Banco de Dados</h6>
+                </div>
+
+                <div class="panel-body">
+                    <label class="@lblClass">
+                        Kelvin
+                    </label>
+                    <label class="@lblClass">
+                        Guilherme
+                    </label>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div id="panel-agenda-visitas" class="@pnlClass">
+                <div class="panel-heading">
+                    <h6 class="panel-title">Web App</h6>
+                </div>
+
+                <div class="panel-body">
+                    <label class="@lblClass">
+                        Jonnathan
+                    </label>
+                    <label class="@lblClass">
+                        Diego
+                    </label>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div id="panel-agenda-visitas" class="@pnlClass">
+                <div class="panel-heading">
+                    <h6 class="panel-title">App Mobile</h6>
+                </div>
+
+                <div class="panel-body">
+                    <label class="@lblClass">
+                        Fernando
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div id="panel-agenda-visitas" class="@pnlClass">
+                <div class="panel-heading">
+                    <h6 class="panel-title">Infraestrutura</h6>
+                </div>
+
+                <div class="panel-body">
+                    <label class="@lblClass">
+                        Victor
+                    </label>
+                    <label class="@lblClass">
+                        Rodolfo
+                    </label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

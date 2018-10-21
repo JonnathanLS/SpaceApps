@@ -149,7 +149,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EspacoPortoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LancamentosAgenciasController.cs" />
     <Compile Include="Controllers\LancamentosFuturosController.cs" />
+    <Compile Include="Controllers\SitesLancamentosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,6 +175,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2463,6 +2466,8 @@
     <Content Include="Static\Assets\locales\ua.json" />
     <Content Include="Views\LancamentosFuturos\Index.cshtml" />
     <Content Include="Views\EspacoPorto\Index.cshtml" />
+    <Content Include="Views\LancamentosAgencias\Index.cshtml" />
+    <Content Include="Views\SitesLancamentos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
